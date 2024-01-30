@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Database.Models
 {
-    Public class Genero
+    public class Genero
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
-        public ICollection<Serie>? Series { get; set; }
+        public ICollection<Serie>? SeriesPrimarias { get; set; }
+        public ICollection<Serie>? SeriesSecundarias { get; set; }
     }
 }

@@ -5,6 +5,8 @@ VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppStreaming", "AppStreaming\AppStreaming.csproj", "{F7156644-64A6-4762-88BE-8FE87273CB48}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{C2A9E765-3FF3-4E07-9014-D08C6433B543}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F7156644-64A6-4762-88BE-8FE87273CB48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7156644-64A6-4762-88BE-8FE87273CB48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7156644-64A6-4762-88BE-8FE87273CB48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2A9E765-3FF3-4E07-9014-D08C6433B543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2A9E765-3FF3-4E07-9014-D08C6433B543}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2A9E765-3FF3-4E07-9014-D08C6433B543}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2A9E765-3FF3-4E07-9014-D08C6433B543}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
