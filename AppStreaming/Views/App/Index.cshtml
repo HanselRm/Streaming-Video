@@ -1,7 +1,24 @@
-﻿﻿@*
+﻿@model List<LogicApplication.ViewModels.SerieViewModel>
+
+@*
     ViewData["Title"] = "Index";
 *@
 
-<div class>
+@foreach(LogicApplication.ViewModels.SerieViewModel serie in Model)
+{
+    <body class="bg-primary">
+        <div class="container mt-5 ">
+            <div class="card bg-dark" style="width: 18rem;">
+                <img class="card-img-top w-100% h-100%" src="https://www.lahiguera.net/cinemania/pelicula/11027/civil_war-cartel-11591.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title text-white fw-bold">@serie.Name</h5>
+                    <p class="text-white">Generos: @serie.GeneroP, @serie.GeneroS</p>
+                    <p class="text-white">Productora: </p>
+                    <a href="#" class="btn btn-primary">Detalles</a>
+                </div>
+            </div>
+        </div>
+    </body>
+}
 
-</div>
+

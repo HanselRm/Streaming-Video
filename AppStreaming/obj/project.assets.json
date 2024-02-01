@@ -797,6 +797,19 @@
         "runtime": {
           "bin/placeholder/Database.dll": {}
         }
+      },
+      "LogicApplication/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Database": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LogicApplication.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LogicApplication.dll": {}
+        }
       }
     }
   },
@@ -2023,11 +2036,17 @@
       "type": "project",
       "path": "../Database/Database.csproj",
       "msbuildProject": "../Database/Database.csproj"
+    },
+    "LogicApplication/1.0.0": {
+      "type": "project",
+      "path": "../LogicApplication/LogicApplication.csproj",
+      "msbuildProject": "../LogicApplication/LogicApplication.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Database >= 1.0.0",
+      "LogicApplication >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.26",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.26"
     ]
@@ -2067,6 +2086,9 @@
           "projectReferences": {
             "C:\\Users\\hanse\\OneDrive\\Escritorio\\itla\\Prog 3\\miniproyecto1\\AppStreaming\\Database\\Database.csproj": {
               "projectPath": "C:\\Users\\hanse\\OneDrive\\Escritorio\\itla\\Prog 3\\miniproyecto1\\AppStreaming\\Database\\Database.csproj"
+            },
+            "C:\\Users\\hanse\\OneDrive\\Escritorio\\itla\\Prog 3\\miniproyecto1\\AppStreaming\\LogicApplication\\LogicApplication.csproj": {
+              "projectPath": "C:\\Users\\hanse\\OneDrive\\Escritorio\\itla\\Prog 3\\miniproyecto1\\AppStreaming\\LogicApplication\\LogicApplication.csproj"
             }
           }
         }

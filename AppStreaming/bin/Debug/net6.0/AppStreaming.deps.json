@@ -9,6 +9,7 @@
       "AppStreaming/1.0.0": {
         "dependencies": {
           "Database": "1.0.0",
+          "LogicApplication": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "6.0.26",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.26"
         },
@@ -454,6 +455,14 @@
         "runtime": {
           "Database.dll": {}
         }
+      },
+      "LogicApplication/1.0.0": {
+        "dependencies": {
+          "Database": "1.0.0"
+        },
+        "runtime": {
+          "LogicApplication.dll": {}
+        }
       }
     }
   },
@@ -765,6 +774,11 @@
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
     "Database/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LogicApplication/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

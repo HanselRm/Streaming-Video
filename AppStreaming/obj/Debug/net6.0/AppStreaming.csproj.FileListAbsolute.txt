@@ -68,3 +68,5 @@ C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\AppStr
 C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\AppStreaming\bin\Debug\net6.0\Database.dll
 C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\AppStreaming\bin\Debug\net6.0\Database.pdb
 C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\AppStreaming\obj\Debug\net6.0\AppStreaming.csproj.CopyComplete
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\AppStreaming\bin\Debug\net6.0\LogicApplication.dll
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\AppStreaming\bin\Debug\net6.0\LogicApplication.pdb

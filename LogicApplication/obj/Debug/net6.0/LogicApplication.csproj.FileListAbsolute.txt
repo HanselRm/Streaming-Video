@@ -1,0 +1,15 @@
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\LogicApplication\bin\Debug\net6.0\LogicApplication.deps.json
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\LogicApplication\bin\Debug\net6.0\LogicApplication.dll
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\LogicApplication\bin\Debug\net6.0\LogicApplication.pdb
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\LogicApplication\bin\Debug\net6.0\Database.dll
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\LogicApplication\bin\Debug\net6.0\Database.pdb
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\LogicApplication\obj\Debug\net6.0\LogicApplication.csproj.AssemblyReference.cache
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\LogicApplication\obj\Debug\net6.0\LogicApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\LogicApplication\obj\Debug\net6.0\LogicApplication.AssemblyInfoInputs.cache
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\LogicApplication\obj\Debug\net6.0\LogicApplication.AssemblyInfo.cs
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\LogicApplication\obj\Debug\net6.0\LogicApplication.csproj.CoreCompileInputs.cache
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\LogicApplication\obj\Debug\net6.0\LogicApplication.csproj.CopyComplete
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\LogicApplication\obj\Debug\net6.0\LogicApplication.dll
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\LogicApplication\obj\Debug\net6.0\refint\LogicApplication.dll
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\LogicApplication\obj\Debug\net6.0\LogicApplication.pdb
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\LogicApplication\obj\Debug\net6.0\ref\LogicApplication.dll
