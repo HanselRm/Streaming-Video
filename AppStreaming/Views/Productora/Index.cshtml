@@ -1,0 +1,40 @@
+﻿@model List<LogicApplication.ViewModels.ProductoraViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+@if (Model == null || Model.Count == 0)
+{
+    <h2 class="">No hay Productoras disponibles</h2>
+}
+else
+{
+    <body class="bg-primary">
+        <div class="container mt-5 ">
+            <div class="row mb-3">
+                <div class="col-3 offset-9">
+                    <a asp-controller="Productora" asp-action="Create" class="btn btn-danger">Agregar nueva Productora</a>
+                </div>
+
+
+                @foreach (LogicApplication.ViewModels.ProductoraViewModel productora in Model)
+                {
+                    <div class="container mt-3">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                @productora.Nombre
+                                <div class="btn-group m-1">
+                                    <a asp-controller="productora" asp-action="Delete" asp-route-id="@productora.Id" class="btn btn-outline-danger">Eliminar</a>
+                                    <a asp-controller="productora" asp-action="Edit" asp-route-id="@productora.Id" class="btn btn-outline-success">Editar</a>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                }
+            </div>
+    </body>
+}
+
