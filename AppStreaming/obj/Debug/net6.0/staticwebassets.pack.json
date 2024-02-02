@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\hanse\\OneDrive\\Escritorio\\itla\\Prog 3\\miniproyecto1\\AppStreaming\\AppStreaming\\wwwroot\\imagenes\\Los minions.jpg",
+      "PackagePath": "staticwebassets\\imagenes\\Los minions.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hanse\\OneDrive\\Escritorio\\itla\\Prog 3\\miniproyecto1\\AppStreaming\\AppStreaming\\wwwroot\\imagenes\\Opemhaimer.jpg",
+      "PackagePath": "staticwebassets\\imagenes\\Opemhaimer.jpg"
+    },
+    {
       "Id": "C:\\Users\\hanse\\OneDrive\\Escritorio\\itla\\Prog 3\\miniproyecto1\\AppStreaming\\AppStreaming\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

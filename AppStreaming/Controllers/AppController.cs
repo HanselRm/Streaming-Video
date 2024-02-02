@@ -6,7 +6,6 @@ namespace AppStreaming.Controllers
 {
     public class AppController : Controller
     {
-        public readonly GeneroService generoService;
         public readonly SerieService serieService;
 
         public AppController(Database.AppContext dbContext)

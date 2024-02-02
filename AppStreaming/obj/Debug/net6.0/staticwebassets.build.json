@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "dP0TmV8ekCD3FT0TEHrXUZ6voX33+4gkNnNuoMMyudM=",
+  "Hash": "7AD68bV5HslJLYQq0AhbfUGz8Q+MR+Bam3eqPdvyrpc=",
   "Source": "AppStreaming",
   "BasePath": "_content/AppStreaming",
   "Mode": "Default",
@@ -83,6 +83,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\hanse\\OneDrive\\Escritorio\\itla\\Prog 3\\miniproyecto1\\AppStreaming\\AppStreaming\\wwwroot\\imagenes\\Los minions.jpg",
+      "SourceId": "AppStreaming",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hanse\\OneDrive\\Escritorio\\itla\\Prog 3\\miniproyecto1\\AppStreaming\\AppStreaming\\wwwroot\\",
+      "BasePath": "_content/AppStreaming",
+      "RelativePath": "imagenes/Los minions.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagenes\\Los minions.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\hanse\\OneDrive\\Escritorio\\itla\\Prog 3\\miniproyecto1\\AppStreaming\\AppStreaming\\wwwroot\\imagenes\\Opemhaimer.jpg",
+      "SourceId": "AppStreaming",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hanse\\OneDrive\\Escritorio\\itla\\Prog 3\\miniproyecto1\\AppStreaming\\AppStreaming\\wwwroot\\",
+      "BasePath": "_content/AppStreaming",
+      "RelativePath": "imagenes/Opemhaimer.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagenes\\Opemhaimer.jpg"
     },
     {
       "Identity": "C:\\Users\\hanse\\OneDrive\\Escritorio\\itla\\Prog 3\\miniproyecto1\\AppStreaming\\AppStreaming\\wwwroot\\js\\site.js",

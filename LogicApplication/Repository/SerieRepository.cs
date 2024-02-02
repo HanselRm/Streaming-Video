@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace LogicApplication.Repository
 {
-    internal class SerieRepository
+    public class SerieRepository
     {
         private readonly Database.AppContext _dbContext;
 

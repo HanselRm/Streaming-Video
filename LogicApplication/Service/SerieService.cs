@@ -13,11 +13,15 @@ namespace LogicApplication.Service
     {
         private readonly SerieRepository _serieRepository;
         private readonly GeneroRepository _generoRepository;
+        private readonly ProductoraRepository _productoraRepository;
+        private readonly ImagenRepository _imagenRepository;
 
         public SerieService(Database.AppContext dbContex)
         {
             _serieRepository = new(dbContex);
             _generoRepository = new(dbContex);
+            _productoraRepository = new(dbContex);
+            _imagenRepository = new(dbContex);
         }
 
         public async Task<List<SerieViewModel>> GetAllViewModel()
@@ -28,22 +32,16 @@ namespace LogicApplication.Service
 
             foreach (var serie in serieList)
             {
-                Genero generoP = await _generoRepository.GetByIdAsync(serie.IdGeneroPrimario);
-                Genero generoS = null;
+                string nombreProductora = await BuscarNombreProductora(serie.IdProductora);
+                string nombreGeneroP = await BuscarNombreGenero(serie.IdGeneroPrimario);
+                string rutaImagen = await BuscarRutaImagen(serie.IdImagen);
+                string nombreGeneroS;
 
                 if (serie.IdGeneroSecundario != null)
                 {
-                    generoS = await _generoRepository.GetByIdAsync((int)serie.IdGeneroSecundario);
+                    nombreGeneroS = await BuscarNombreGenero((int)serie.IdGeneroSecundario);
                 }
-                
-                string nombreGeneroP = generoP.Nombre;
-                string nombreGeneroS;
 
-                
-                if (generoS != null)
-                {
-                    nombreGeneroS = generoS.Nombre;
-                }
                 else
                 {
                     nombreGeneroS = "";
@@ -54,8 +52,9 @@ namespace LogicApplication.Service
                     Id = serie.Id,
                     Name = serie.Name,
                     Enlace = serie.Enlace,
-                    Productora = serie.IdProductora.ToString(),
+                    Productora = nombreProductora,
                     GeneroP = nombreGeneroP,
+                    Imagen = rutaImagen,
                     GeneroS = nombreGeneroS
 
                 };
@@ -67,10 +66,22 @@ namespace LogicApplication.Service
         }
 
 
-        public async Task<Genero> BuscarGenero(int id)
+        public async Task<String> BuscarNombreGenero(int id)
         {
             Genero genero = await _generoRepository.GetByIdAsync(id);
-            return genero;
+            return genero.Nombre;
+        }
+
+        public async Task<String> BuscarNombreProductora(int id)
+        {
+            Productora productora = await _productoraRepository.GetByIdAsync(id);
+            return productora.Nombre;
+        }
+        public async Task<String> BuscarRutaImagen(int id)
+        {
+            Imagen imagen = await _imagenRepository.GetByIdAsync(id);
+            string ruta = $"/imagenes/{imagen.Name}";
+            return ruta;
         }
     }
 }
