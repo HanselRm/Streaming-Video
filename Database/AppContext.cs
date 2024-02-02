@@ -17,7 +17,6 @@ namespace Database
         }
 
         public DbSet<Genero> Generos { get; set; }
-        public DbSet<Imagen> Imagenes { get; set; }
         public DbSet<Serie> Series { get; set; }
         public DbSet<Productora> Productoras { get; set; }
 
@@ -27,7 +26,6 @@ namespace Database
 
             #region tablas
             modelBuilder.Entity<Genero>().ToTable("Generos");
-            modelBuilder.Entity<Imagen>().ToTable("Imagenes");
             modelBuilder.Entity<Serie>().ToTable("Series");
             modelBuilder.Entity<Productora>().ToTable("Productoras");
             #endregion
@@ -35,7 +33,6 @@ namespace Database
             #region "primary key"
             modelBuilder.Entity<Genero>().HasKey(Genero => Genero.Id);
             modelBuilder.Entity<Serie>().HasKey(Serie => Serie.Id);
-            modelBuilder.Entity<Imagen>().HasKey(Imagen => Imagen.Id);
             modelBuilder.Entity<Productora>().HasKey(Productora => Productora.Id);
             #endregion
 
@@ -58,11 +55,6 @@ namespace Database
                 .HasForeignKey(s => s.IdProductora)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            modelBuilder.Entity<Serie>()
-                .HasOne<Imagen>(s => s.Imagen)
-                .WithMany()
-                .HasForeignKey(s => s.IdImagen)
-                .OnDelete(DeleteBehavior.Cascade);
             #endregion
         }
     }

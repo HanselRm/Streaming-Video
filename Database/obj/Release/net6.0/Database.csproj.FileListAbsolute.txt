@@ -1,0 +1,14 @@
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\Database\bin\Release\net6.0\Database.deps.json
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\Database\bin\Release\net6.0\Database.runtimeconfig.json
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\Database\bin\Release\net6.0\Database.dll
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\Database\bin\Release\net6.0\Database.pdb
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\Database\obj\Release\net6.0\Database.csproj.AssemblyReference.cache
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\Database\obj\Release\net6.0\Database.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\Database\obj\Release\net6.0\Database.AssemblyInfoInputs.cache
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\Database\obj\Release\net6.0\Database.AssemblyInfo.cs
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\Database\obj\Release\net6.0\Database.csproj.CoreCompileInputs.cache
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\Database\obj\Release\net6.0\Database.dll
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\Database\obj\Release\net6.0\refint\Database.dll
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\Database\obj\Release\net6.0\Database.pdb
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\Database\obj\Release\net6.0\Database.genruntimeconfig.cache
+C:\Users\hanse\OneDrive\Escritorio\itla\Prog 3\miniproyecto1\AppStreaming\Database\obj\Release\net6.0\ref\Database.dll

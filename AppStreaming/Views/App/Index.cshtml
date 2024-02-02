@@ -13,12 +13,12 @@
     <body class="bg-primary">
         <div class="container mt-5 ">
             <div class="card bg-dark" style="width: 18rem;">
-                <img class="card-img-top w-100% h-100%" src="@serie.Imagen" alt="Card image cap">
+                <img class="card-img-top w-100% h-100%" src="@serie.Imagenurl" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title text-white fw-bold">@serie.Name</h5>
                     <p class="text-white">Generos: @serie.GeneroP, @serie.GeneroS</p>
                     <p class="text-white">Productora: @serie.Productora </p>
-                    <a href="#" class="btn btn-primary">Detalles</a>
+                        <a asp-controller="Serie" asp-action="Detalles" btn-primary">Detalles</a>    
                 </div>
             </div>
         </div>

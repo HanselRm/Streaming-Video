@@ -14,6 +14,6 @@ namespace LogicApplication.ViewModels
         public string Productora { get; set; }
         public string GeneroP { get; set; }
         public string? GeneroS { get; set; }
-        public string Imagen { get; set; }
+        public string Imagenurl { get; set; }
     }
 }

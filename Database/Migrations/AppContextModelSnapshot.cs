@@ -39,27 +39,6 @@ namespace Database.Migrations
                     b.ToTable("Generos", (string)null);
                 });
 
-            modelBuilder.Entity("Database.Models.Imagen", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Ruta")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Imagenes", (string)null);
-                });
-
             modelBuilder.Entity("Database.Models.Productora", b =>
                 {
                     b.Property<int>("Id")
@@ -95,11 +74,12 @@ namespace Database.Migrations
                     b.Property<int?>("IdGeneroSecundario")
                         .HasColumnType("int");
 
-                    b.Property<int>("IdImagen")
-                        .HasColumnType("int");
-
                     b.Property<int>("IdProductora")
                         .HasColumnType("int");
+
+                    b.Property<string>("ImagenUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -110,8 +90,6 @@ namespace Database.Migrations
                     b.HasIndex("IdGeneroPrimario");
 
                     b.HasIndex("IdGeneroSecundario");
-
-                    b.HasIndex("IdImagen");
 
                     b.HasIndex("IdProductora");
 
@@ -131,12 +109,6 @@ namespace Database.Migrations
                         .HasForeignKey("IdGeneroSecundario")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("Database.Models.Imagen", "Imagen")
-                        .WithMany()
-                        .HasForeignKey("IdImagen")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Database.Models.Productora", "productora")
                         .WithMany("Series")
                         .HasForeignKey("IdProductora")
@@ -146,8 +118,6 @@ namespace Database.Migrations
                     b.Navigation("GeneroPrimario");
 
                     b.Navigation("GeneroSecundario");
-
-                    b.Navigation("Imagen");
 
                     b.Navigation("productora");
                 });

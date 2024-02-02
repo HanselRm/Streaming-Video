@@ -1,0 +1,43 @@
+﻿@model List<LogicApplication.ViewModels.SerieViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+@if (Model == null || Model.Count == 0)
+{
+    <h2 class="">No hay Series disponibles</h2>
+    <body class="bg-primary">
+            <div class="container mt-5 ">
+            <div class="row mb-3">
+                <div class="col-3 offset-9">
+                    <a asp-controller="Serie" asp-action="Create" class="btn btn-danger">Agregar nueva Serie</a>
+                </div>
+                </body>
+}
+else
+{
+    <body class="bg-primary">
+            <div class="container mt-5 ">
+            <div class="row mb-3">
+                <div class="col-3 offset-9">
+                    <a asp-controller="Serie" asp-action="Create" class="btn btn-danger">Agregar nueva Serie</a>
+                </div>
+    @foreach (LogicApplication.ViewModels.SerieViewModel serie in Model)
+    {
+        
+                <div class="card bg-dark" style="width: 18rem;">
+                    <img class="card-img-top w-100% h-100%" src="@serie.Imagenurl" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title text-white fw-bold">@serie.Name</h5>
+                        <p class="text-white">Generos: @serie.GeneroP, @serie.GeneroS</p>
+                        <p class="text-white">Productora: @serie.Productora </p>
+                            <a asp-controller="Serie" asp-action="Delete" asp-route-id="@serie.Id" class="btn btn-outline-danger">Eliminar</a>
+                            <a asp-controller="Serie" asp-action="Edit" asp-route-id="@serie.Id" class="btn btn-outline-success">Editar</a>
+                    </div>
+                </div>
+            
+    }
+            </div>
+    </body>
+}
+
