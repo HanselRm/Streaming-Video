@@ -36,27 +36,37 @@
                             <label asp-for="IdGeneroPrimario" class="form-label">Genero 1: </label>
                             <select asp-for="IdGeneroPrimario" class="form-select">
                                 <option value=""> Seleccione una opcion</option>
-                                <option value="1">Acción</option>
-                                <option value="2">Aventura</option>
+                                @foreach (var gen in Model.generoList)
+                                {
+                                    <option value="@gen.Id">@gen.Nombre</option>
+                                }
                             </select>
+                            <span asp-validation-for="IdGeneroPrimario" class="text-danger"></span>
                         </div>
 
                         <div class="mb-3">
                             <label asp-for="IdGeneroSecundario" class="form-label">Genero 2: </label>
                             <select asp-for="IdGeneroSecundario" class="form-select">
                                 <option value=""> Seleccione una opcion</option>
-                                <option value="1">Acción</option>
-                                <option value="2">Aventura</option>
+                                @foreach (var gen in Model.generoList)
+                                {
+                                    <option value="@gen.Id">@gen.Nombre</option>
+                                }
+                                
                             </select>
+                            
                         </div>
 
                         <div class="mb-3">
                             <label asp-for="IdProductora" class="form-label">Productora: </label>
                             <select asp-for="IdProductora" class="form-select">
                                 <option value=""> Seleccione una opcion</option>
-                                <option value="1">Walt Disney Studios</option>
-                                <option value="2">Universal Pictures</option>
+                                @foreach (var pro in Model.productoraList)
+                                {
+                                    <option value="@pro.Id">@pro.Nombre</option>
+                                }
                             </select>
+                            <span asp-validation-for="IdProductora" class="text-danger"></span>
                         </div>
 
                         <input type="hidden" asp-for="Id" />
