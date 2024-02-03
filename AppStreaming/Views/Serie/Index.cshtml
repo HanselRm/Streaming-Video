@@ -17,16 +17,19 @@
 else
 {
     <body class="bg-primary">
-            <div class="container mt-5 ">
+        <div class="container">
             <div class="row mb-3">
                 <div class="col-3 offset-9">
                     <a asp-controller="Serie" asp-action="Create" class="btn btn-danger">Agregar nueva Serie</a>
                 </div>
+            </div>
+
+            <div class="d-flex flex-wrap py-4 px-4">
     @foreach (LogicApplication.ViewModels.SerieViewModel serie in Model)
     {
-        
-                <div class="card bg-dark" style="width: 18rem;">
-                    <img class="card-img-top w-100% h-100%" src="@serie.Imagenurl" alt="Card image cap">
+
+                    <div class="card bg-dark col-4 m-lg-1" style="width: 12rem;">
+                        <img class="card-img-top w-100 h-100" src="@serie.Imagenurl" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title text-white fw-bold">@serie.Name</h5>
                         <p class="text-white">Generos: @serie.GeneroP, @serie.GeneroS</p>

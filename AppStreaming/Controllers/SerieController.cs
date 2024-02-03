@@ -1,4 +1,5 @@
-﻿using LogicApplication.Service;
+﻿using Database.Models;
+using LogicApplication.Service;
 using LogicApplication.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
@@ -38,7 +39,7 @@ namespace AppStreaming.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(SaveSerieViewModel sm)
         {
-            
+
             if (!ModelState.IsValid)
             {
                 var generoList = await generoService.GetAllViewModel();
@@ -81,7 +82,7 @@ namespace AppStreaming.Controllers
             sm.generoList = await generoService.GetAllViewModel();
             sm.productoraList = await productoraService.GetAllViewModel();
 
-            
+
 
             if (!ModelState.IsValid)
             {
@@ -92,7 +93,7 @@ namespace AppStreaming.Controllers
 
                 return View("SaveSerie", sm);
             }
-            
+
 
             await serieService.Udapte(sm);
             return RedirectToRoute(new { controller = "Serie", action = "Index" });
@@ -109,6 +110,13 @@ namespace AppStreaming.Controllers
 
             await serieService.Delete(id);
             return RedirectToRoute(new { controller = "Serie", action = "Index" });
+        }
+
+        public async Task<IActionResult> Detalles(int id)
+        {
+            SaveSerieViewModel serie = await serieService.GetByIdGeneroViewModel(id);
+
+            return View("Detalles",serie);
         }
     }
 }
