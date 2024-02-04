@@ -20,8 +20,44 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hanse/OneDrive/Escritorio/itla/Prog 3/miniproyecto1/AppStreaming/AppStreaming/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+[C:/Users/hanse/OneDrive/Escritorio/itla/Prog 3/miniproyecto1/AppStreaming/AppStreaming/Views/Genero/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJvXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hanse/OneDrive/Escritorio/itla/Prog 3/miniproyecto1/AppStreaming/AppStreaming/Views/Genero/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hanse/OneDrive/Escritorio/itla/Prog 3/miniproyecto1/AppStreaming/AppStreaming/Views/Genero/SaveGenero.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJvXFNhdmVHZW5lcm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hanse/OneDrive/Escritorio/itla/Prog 3/miniproyecto1/AppStreaming/AppStreaming/Views/Productora/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9yYVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hanse/OneDrive/Escritorio/itla/Prog 3/miniproyecto1/AppStreaming/AppStreaming/Views/Productora/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9yYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hanse/OneDrive/Escritorio/itla/Prog 3/miniproyecto1/AppStreaming/AppStreaming/Views/Productora/SaveProductora.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9yYVxTYXZlUHJvZHVjdG9yYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hanse/OneDrive/Escritorio/itla/Prog 3/miniproyecto1/AppStreaming/AppStreaming/Views/Serie/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VyaWVcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hanse/OneDrive/Escritorio/itla/Prog 3/miniproyecto1/AppStreaming/AppStreaming/Views/Serie/Detalles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VyaWVcRGV0YWxsZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hanse/OneDrive/Escritorio/itla/Prog 3/miniproyecto1/AppStreaming/AppStreaming/Views/Serie/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VyaWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hanse/OneDrive/Escritorio/itla/Prog 3/miniproyecto1/AppStreaming/AppStreaming/Views/Serie/SaveSerie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VyaWVcU2F2ZVNlcmllLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/hanse/OneDrive/Escritorio/itla/Prog 3/miniproyecto1/AppStreaming/AppStreaming/Views/Shared/_ValidationScriptsPartial.cshtml]

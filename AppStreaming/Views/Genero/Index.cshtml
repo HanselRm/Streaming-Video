@@ -1,0 +1,50 @@
+﻿@model List<LogicApplication.ViewModels.GeneroViewModel>
+
+@*
+    ViewData["Title"] = "Genero";
+*@
+
+@if (Model == null || Model.Count == 0)
+{
+    <body class="" style="background-color:#08367e;">
+
+        <h2 class="">No hay Géneros disponibles</h2>
+
+        <div class="container mt-5 ">
+            <div class="row mb-3">
+                <div class="col-3 offset-9">
+                    <a asp-controller="Genero" asp-action="Create" class="btn btn-danger">Agregar nuevo género</a>
+                </div>
+            </div>
+        </div>
+    </body>
+}
+else
+{
+    <body class="" style="background-color:#08367e;">
+        <div class="container mt-5 ">
+            <div class="row mb-3">
+                <div class="col-3 offset-9">
+                    <a asp-controller="Genero" asp-action="Create" class="btn btn-danger">Agregar nuevo género</a>
+                </div>
+
+
+                @foreach (LogicApplication.ViewModels.GeneroViewModel genero in Model)
+                {
+                    <div class="container mt-3">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                @genero.Nombre
+                                <div class="btn-group m-1">
+                                    <a asp-controller="Genero" asp-action="Delete" asp-route-id="@genero.Id" class="btn btn-outline-danger">Eliminar</a>
+                                    <a asp-controller="Genero" asp-action="Edit" asp-route-id="@genero.Id" class="btn btn-outline-success">Editar</a>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                }
+            </div>
+    </body>
+}
