@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace LogicApplication.Service
 {
@@ -62,6 +63,50 @@ namespace LogicApplication.Service
 
             return serieViewModelList;
         }
+        public async Task<List<DetalleViewModel>> GetAllDetallesViewModel()
+        {
+            //Obtengo todas las series
+            var serieList = await _serieRepository.GetAllAsync();
+            var detalleViewModel = new List<DetalleViewModel>();
+
+            var generoL = await _generoRepository.GetAllAsync();
+            var productoraList = await _productoraRepository.GetAllAsync();
+
+            foreach (var serie in serieList)
+            {
+                string nombreProductora = await BuscarNombreProductora(serie.IdProductora);
+                string nombreGeneroP = await BuscarNombreGenero(serie.IdGeneroPrimario);
+                string nombreGeneroS;
+
+                if (serie.IdGeneroSecundario != null)
+                {
+                    nombreGeneroS = await BuscarNombreGenero((int)serie.IdGeneroSecundario);
+                }
+
+                else
+                {
+                    nombreGeneroS = "";
+                }
+
+                var detalleViewMod = new DetalleViewModel
+                {
+                    Id = serie.Id,
+                    Name = serie.Name,
+                    Enlace = serie.Enlace,
+                    Productora = nombreProductora,
+                    GeneroP = nombreGeneroP,
+                    ImagenUrl = serie.ImagenUrl,
+                    GeneroS = nombreGeneroS,
+                    generoList = generoL,
+                    productoraList = productoraList
+
+                };
+
+                detalleViewModel.Add(detalleViewMod);
+            }
+
+            return detalleViewModel;
+        }
 
         public async Task Add(SaveSerieViewModel sm)
         {
@@ -92,6 +137,7 @@ namespace LogicApplication.Service
             return sm;
         }
 
+
         public async Task Udapte(SaveSerieViewModel sm)
         {
             Serie serie = new();
@@ -110,6 +156,55 @@ namespace LogicApplication.Service
             var serie = await _serieRepository.GetByIdAsync(id);
 
             await _serieRepository.DeleteAsync(serie);
+        }
+
+        public async Task<List<DetalleViewModel>> GetByName(string name)
+        {
+            //Obtengo todas las series filtradas
+            var serieList = await _serieRepository.GetAllAsync();
+            var seriesFiltradas = serieList.Where(s => s.Name.Contains(name)).ToList();
+
+            var generoL = await _generoRepository.GetAllAsync();
+            var productoraList = await _productoraRepository.GetAllAsync();
+
+
+            var detalleList = new List<DetalleViewModel>();
+
+
+
+            foreach (var serie in seriesFiltradas)
+            {
+                string nombreProductora = await BuscarNombreProductora(serie.IdProductora);
+                string nombreGeneroP = await BuscarNombreGenero(serie.IdGeneroPrimario);
+                string nombreGeneroS;
+
+                if (serie.IdGeneroSecundario != null)
+                {
+                    nombreGeneroS = await BuscarNombreGenero((int)serie.IdGeneroSecundario);
+                }
+
+                else
+                {
+                    nombreGeneroS = "";
+                }
+
+                var detalleViewModel = new DetalleViewModel
+                {
+                    Id = serie.Id,
+                    Name = serie.Name,
+                    Enlace = serie.Enlace,
+                    Productora = nombreProductora,
+                    GeneroP = nombreGeneroP,
+                    ImagenUrl = serie.ImagenUrl,
+                    GeneroS = nombreGeneroS,
+                    generoList = generoL,
+                    productoraList = productoraList
+                };
+
+                detalleList.Add(detalleViewModel);
+            }
+
+            return detalleList;
         }
 
         public async Task<String> BuscarNombreGenero(int id)

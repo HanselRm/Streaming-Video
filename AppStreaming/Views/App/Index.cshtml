@@ -1,38 +1,89 @@
-﻿@model List<LogicApplication.ViewModels.SerieViewModel>
+﻿@model List<LogicApplication.ViewModels.DetalleViewModel>
 
 @*
     ViewData["Title"] = "Index";
 *@
 
-@if(Model == null || Model.Count == 0)
+@if (Model == null || Model.Count == 0)
 {
     <h2 class="">No hay Series disponibles</h2>
-}else{
-     <body class="bg-primary">
-        <div class="container">
-            <div class="d-flex justify-content-center h-100">
-                
-                
+}
+else
+{
+    <body class="bg-primary">
+        <div class="container-fluid">
+            <div class="row">
 
+                <div class="col-md-3 ">
+                    <form asp-controller="App" asp-action="BuscarPorGenero" class="m-2">
+                        <label class="list-group-item bg-dark">
+                            <div class="form-group">
+                                <label class="text-light">Géneros:</label>
+                                <div class="row ">
+                                    @foreach (var genero in Model[0].generoList)
+                                    {
+                                        <div class="form-check col-md-12 text-light">
+                                            <input class="form-check-input" type="checkbox" name="Genero" value="@genero.Nombre">
+                                            <label class="form-check-label">
+                                                @genero.Nombre
+                                            </label>
+                                        </div>
+                                    }
+                                    <button type="submit" class="btn btn-sm btn-light col-4">Filtrar</button>
+                                </div>
 
-            </div>
-            <div class="d-flex flex-wrap py-4 px-4">
-                @foreach (LogicApplication.ViewModels.SerieViewModel serie in Model)
-                {
-
-                    <div class="card bg-dark col-4 m-lg-1" style="width: 12rem;">
-                        <img class="card-img-top w-100 h-100" src="@serie.Imagenurl" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title text-white fw-bold">@serie.Name</h5>
-                                <p class="text-white">Generos: @serie.GeneroP, @serie.GeneroS</p>
-                                <p class="text-white">Productora: @serie.Productora </p>
-                                    <a asp-controller="Serie" asp-action="Detalles" asp-route-id="@serie.Id" class="btn btn-outline-danger">Detalles</a>
                             </div>
+                        </label>
+                    </form>
+                    <form asp-controller="App" asp-action="BuscarPorProductora" class="m-2">
+                        <label class="list-group-item bg-dark">
+                            <div class="form-group">
+                                <label class="text-light">Productoras:</label>
+                                <div class="row ">
+                                    @foreach (var pruductoras in Model[0].productoraList)
+                                    {
+                                        <div class="form-check col-md-12 text-light">
+                                            <input class="form-check-input" type="checkbox" name="Productora" value="@pruductoras.Nombre">
+                                            <label class="form-check-label">
+                                                @pruductoras.Nombre
+                                            </label>
+                                        </div>
+                                    }
+                                    <button type="submit" class="btn btn-sm btn-light col-4">Filtrar</button>
+                                </div>
+
+                            </div>
+                        </label>
+                    </form>
+                </div>
+                <!-- Columna del formulario de búsqueda -->
+                <div class="col-md-9">
+                    <div class="d-flex flex-column">
+                        <form method="post" asp-controller="App" asp-action="BuscarNombre" class="mb-3">
+                            <div class="input-group">
+                                <input type="text" name="Name" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon">
+                                <button type="submit" class="btn btn-dark" data-mdb-ripple-init>Filtrar</button>
+                            </div>
+                        </form>
+
+                        <div class="d-flex flex-wrap">
+                            @foreach (LogicApplication.ViewModels.DetalleViewModel serie in Model)
+                            {
+
+                                <div class="card bg-dark col-4 m-lg-1" style="width: 12rem;">
+                                    <img class="card-img-top w-100 h-100" src="@serie.ImagenUrl" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-white fw-bold">@serie.Name</h5>
+                                        <p class="text-white">Generos: @serie.GeneroP, @serie.GeneroS</p>
+                                        <p class="text-white">Productora: @serie.Productora </p>
+                                        <a asp-controller="Serie" asp-action="Detalles" asp-route-id="@serie.Id" class="btn btn-outline-danger">Detalles</a>
+                                    </div>
+                                </div>
+                            }
+                        </div>
                     </div>
-                }
+                </div>
             </div>
-        </div>
-        
     </body>
 }
 
