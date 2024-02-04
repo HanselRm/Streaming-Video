@@ -3,22 +3,22 @@
     ViewData["Title"] = "Eliminar Genero";
 }
 
-<div class="row">
-    <div class="col-6 offset-3">
-        <div class="card">
-            <div class="card-header bg-danger text-light">
-                <h4> Esta seguro que quiere eliminar el genero: @Model.Nombre?</h4>
-            </div>
-            <div class="card-body">
-                <form method="post" asp-controller="Genero" asp-action="DeletePorPost">
-                    <input type="hidden" asp-for="Id" />
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card">
+                <div class="card-header bg-danger text-light">
+                    <h4> Esta seguro que quiere eliminar el genero: @Model.Nombre?</h4>
+                </div>
+                <div class="card-body">
+                    <form method="post" asp-controller="Genero" asp-action="DeletePorPost">
+                        <input type="hidden" asp-for="Id" />
 
-                    <button type="submit" class="btn btn-danger">Eliminar</button>
-                    <a asp-controller="Genero" asp-action="Index" class="btn btn-warning">Cancelar</a>
-                </form>
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                        <a asp-controller="Genero" asp-action="Index" class="btn btn-warning">Cancelar</a>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
 
-</div>
+    </div>
 

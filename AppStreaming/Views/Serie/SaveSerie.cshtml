@@ -4,7 +4,8 @@
     ViewData["Title"] = "Guardar Serie";
 }
 
-<body class="bg-primary">
+<
+<body class="" style="background-color:#08367e;">
     <div class="row ">
         <div class="col-6 offset-3">
             <div class="card">
@@ -22,7 +23,9 @@
                         </div>
 
                         <div class="mb-3">
-                            <label asp-for="Enlace" class="form-label">Video: </label>
+                            <label asp-for="Enlace" class="form-label">Video: 
+                                (<a href="https://soporte.easypromosapp.com/hc/es/articles/360043822672-Vídeo-Cómo-obtener-el-ID-de-un-vídeo-de-YouTube" target="_blank">Sacar codigo del video</a>)
+                            </label>
                             <input type="text" asp-for="Enlace" class="form-control" />
                             <span asp-validation-for="Enlace" class="text-danger"></span>
                         </div>
@@ -52,9 +55,9 @@
                                 {
                                     <option value="@gen.Id">@gen.Nombre</option>
                                 }
-                                
+
                             </select>
-                            
+
                         </div>
 
                         <div class="mb-3">

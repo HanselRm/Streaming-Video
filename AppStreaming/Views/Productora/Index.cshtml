@@ -6,18 +6,30 @@
 
 @if (Model == null || Model.Count == 0)
 {
-    <h2 class="">No hay Productoras disponibles</h2>
-}
-else
-{
-    <body class="bg-primary">
+
+
+    <body class="" style="background-color:#08367e;">
+
+        <h2 class="">No hay Productoras disponibles</h2>
+
         <div class="container mt-5 ">
             <div class="row mb-3">
                 <div class="col-3 offset-9">
                     <a asp-controller="Productora" asp-action="Create" class="btn btn-danger">Agregar nueva Productora</a>
                 </div>
+            </div>
+        </div>
+    </body>
+}
+else
+{
+    <body class="" style="background-color:#08367e;">
+        <div class="container mt-5 ">
+            <div class="row mb-3">
 
-
+                <div class="col-3 offset-9">
+                    <a asp-controller="Productora" asp-action="Create" class="btn btn-danger">Agregar nueva Productora</a>
+                </div>
                 @foreach (LogicApplication.ViewModels.ProductoraViewModel productora in Model)
                 {
                     <div class="container mt-3">
